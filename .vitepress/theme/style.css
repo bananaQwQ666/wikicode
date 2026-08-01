@@ -156,35 +156,34 @@ mark,
   transition: all 0.2s ease-in-out;
 }
 
-/* 浅色主题 (Light Mode)：高对比度深琥珀橘文字 + 暖橙亮线条，与深色模式高度统一 */
+/* 浅色主题 (Light Mode)：经典 Notion/Apple 风格柔和暖黄荧光笔 + 琥珀金下划线，保持正文自然字体颜色 */
 :root:not(.dark) mark,
 :root:not(.dark) .glow-text {
-  color: #c2410c !important; /* 深度暖橘文字，高对比度，清晰醒目 */
+  color: var(--vp-c-text-1) !important;
   background-image: linear-gradient(
     180deg,
-    transparent 55%,
-    rgba(249, 115, 22, 0.16) 55%
+    transparent 50%,
+    rgba(253, 224, 71, 0.55) 50%
   ) !important;
-  border-bottom: 2.5px solid #f97316 !important;
-  filter: drop-shadow(0 1px 3px rgba(249, 115, 22, 0.2));
+  border-bottom: 2.5px solid #f59e0b !important;
 }
 
-/* 深色主题 (Dark Mode)：明亮暖橘金文字 + 柔和发光线 */
+/* 深色主题 (Dark Mode)：暖金橘发光底衬 + 亮白暖字 */
 .dark mark,
 .dark .glow-text {
-  color: #fb923c !important; /* 明亮暖橘金文字，暗黑下极佳可读性 */
+  color: #ffedd5 !important;
   background-image: linear-gradient(
     180deg,
     transparent 55%,
-    rgba(251, 146, 60, 0.22) 55%
+    rgba(251, 146, 60, 0.25) 55%
   ) !important;
   border-bottom: 2.5px solid #fb923c !important;
-  text-shadow: 0 1px 8px rgba(251, 146, 60, 0.5);
+  text-shadow: 0 1px 6px rgba(251, 146, 60, 0.4);
 }
 
 mark:hover,
 .glow-text:hover {
-  filter: brightness(1.15);
+  filter: brightness(1.08);
 }
 
 

@@ -1,5 +1,9 @@
 import { defineConfig } from 'vitepress'
 import { ImagePreviewPlugin } from 'vitepress-plugin-image-preview'
+import {
+  GitChangelog,
+  GitChangelogMarkdownSection,
+} from '@nolebase/vitepress-plugin-git-changelog/vite'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -47,7 +51,29 @@ export default defineConfig({
     plugins:[
       ImagePreviewPlugin({
         hideOnClickModal:true
-      })
+      }),
+      GitChangelog({
+        repoURL: () => 'https://github.com/bananaQwQ666/wikicode',
+        mapAuthors: [
+          {
+            name: 'Cosmosuperbaka',
+            username: 'Cosmosuperbaka',
+            mapByNameAliases: ['AdmireLinK', 'Cosmosuperbaka'],
+            mapByEmailAliases: ['admirezhong@gmail.com'],
+          },
+          {
+            name: '你的小蕉呀',
+            username: 'bananaQwQ666',
+            mapByNameAliases: ['你的小蕉呀'],
+            mapByEmailAliases: ['bananaqwq@hotmail.com'],
+          }
+        ],
+      }),
+      GitChangelogMarkdownSection({
+        sections: {
+          disableContributors: true,
+        }
+      }),
     ]
   },
   themeConfig: {

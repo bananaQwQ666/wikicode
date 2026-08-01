@@ -1,7 +1,12 @@
 import { defineConfig } from 'vitepress'
 import { ImagePreviewPlugin } from 'vitepress-plugin-image-preview'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
+  srcDir: './docs',
   title: "YunLiuCraft 官方文档",
   description: "YunLiuCraft 官方文档",
   lang: 'zh-CN',
@@ -15,6 +20,7 @@ export default defineConfig({
     lastmod: true
   },
   vite:{
+    publicDir: path.resolve(__dirname, '../public'),
     plugins:[
       ImagePreviewPlugin({
         hideOnClickModal:true

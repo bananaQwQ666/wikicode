@@ -188,6 +188,22 @@ mark:hover,
   filter: brightness(1.1);
 }
 
+/**
+ * Nolebase Git Changelog 页面历史样式（对齐 whudays.org）
+ * -------------------------------------------------------------------------- */
+
+/* 1. 页面历史容器背景保持与 whudays.org 一致的灰色 (details 块背景) */
+.vp-nolebase-git-changelog-history {
+  background-color: var(--vp-custom-block-details-bg, var(--vp-c-bg-soft)) !important;
+}
+
+/* 2. 贡献者头像禁用 img 上的 pointer-events，确保点击穿透至 <a> 标签跳转主页，不触发图片预览 */
+.vp-nolebase-git-changelog img,
+.vp-nolebase-git-changelog-commit-avatar {
+  pointer-events: none;
+}
+
+
 
 
 

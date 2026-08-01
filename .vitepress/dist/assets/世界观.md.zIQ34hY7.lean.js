@@ -1,0 +1,1 @@
+import{_ as e,c as r,o as t,an as h}from"./chunks/framework.BWTWahbf.js";const c=JSON.parse('{"title":"世界观","description":"","frontmatter":{},"headers":[],"relativePath":"世界观.md","filePath":"世界观.md"}'),o={name:"世界观.md"};function i(l,a,n,d,_,p){return t(),r("div",null,a[0]||(a[0]=[h("",39)]))}const u=e(o,[["render",i]]);export{c as __pageData,u as default};

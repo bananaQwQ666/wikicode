@@ -1,0 +1,1 @@
+import{_ as a,c as d,o as e,an as r}from"./chunks/framework.BWTWahbf.js";const m=JSON.parse('{"title":"赞助列表","description":"","frontmatter":{},"headers":[],"relativePath":"赞助列表.md","filePath":"赞助列表.md"}'),o={name:"赞助列表.md"};function _(n,t,h,i,s,l){return e(),d("div",null,t[0]||(t[0]=[r("",3)]))}const p=a(o,[["render",_]]);export{m as __pageData,p as default};

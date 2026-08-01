@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as i,an as l}from"./chunks/framework.BWTWahbf.js";const p=JSON.parse('{"title":"更新日志","description":"","frontmatter":{},"headers":[],"relativePath":"更新日志.md","filePath":"更新日志.md"}'),r={name:"更新日志.md"};function n(_,a,o,s,c,f){return i(),e("div",null,a[0]||(a[0]=[l("",2)]))}const u=t(r,[["render",n]]);export{p as __pageData,u as default};

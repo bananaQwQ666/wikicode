@@ -137,3 +137,57 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/* 高亮发光文本样式 (<mark> & ==文本== & .glow-text) */
+mark,
+.glow-text {
+  font-weight: 700;
+  color: var(--mark-text-color, #f97316);
+  background-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  padding: 0 3px 1px 3px;
+  margin: 0 1px;
+  display: inline;
+  position: relative;
+  text-decoration: none;
+
+  /* 数字化荧光底衬 + 底部炫彩线条，无四周边框发光包围 */
+  background-image: linear-gradient(
+    180deg,
+    transparent 55%,
+    var(--mark-bg-color, rgba(249, 115, 22, 0.18)) 55%
+  ) !important;
+  border-bottom: 2.5px solid var(--mark-line-color, #f97316) !important;
+  border-radius: 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* 浅色主题：活力暖橙/琥珀渐变高亮 */
+:root:not(.dark) mark,
+:root:not(.dark) .glow-text {
+  --mark-text-color: #ea580c;
+  --mark-line-color: #f97316;
+  --mark-bg-color: rgba(249, 115, 22, 0.16);
+}
+
+/* 深色主题：暖金橘发光底衬，彻底消除四周白框 */
+.dark mark,
+.dark .glow-text {
+  --mark-text-color: #ffedd5;
+  --mark-line-color: #fb923c;
+  --mark-bg-color: rgba(251, 146, 60, 0.25);
+  text-shadow: 0 1px 6px rgba(251, 146, 60, 0.4);
+}
+
+mark:hover,
+.glow-text:hover {
+  --mark-line-color: #ff6b6b;
+  filter: brightness(1.1);
+}
+
+
+
+

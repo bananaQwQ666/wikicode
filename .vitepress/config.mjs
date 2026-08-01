@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 import { ImagePreviewPlugin } from 'vitepress-plugin-image-preview'
-import mdMark from 'markdown-it-mark'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -11,7 +10,24 @@ export default defineConfig({
   cleanUrls: true,
   markdown: {
     config: (md) => {
-      md.use(mdMark)
+      md.inline.ruler.before('emphasis', 'custom_mark', (state, silent) => {
+        if (state.src.charCodeAt(state.pos) !== 0x3D /* = */ || state.src.charCodeAt(state.pos + 1) !== 0x3D) {
+          return false;
+        }
+        const start = state.pos;
+        const end = state.src.indexOf('==', start + 2);
+        if (end === -1) return false;
+        if (!silent) {
+          const tokenOpen = state.push('mark_open', 'mark', 1);
+          tokenOpen.markup = '==';
+          const tokenText = state.push('text', '', 0);
+          tokenText.content = state.src.slice(start + 2, end);
+          const tokenClose = state.push('mark_close', 'mark', -1);
+          tokenClose.markup = '==';
+        }
+        state.pos = end + 2;
+        return true;
+      });
     }
   },
   title: "YunLiuCraft 官方文档",

@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { ImagePreviewPlugin } from 'vitepress-plugin-image-preview'
+import mdMark from 'markdown-it-mark'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -7,6 +8,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   srcDir: './docs',
+  cleanUrls: true,
+  markdown: {
+    config: (md) => {
+      md.use(mdMark)
+    }
+  },
   title: "YunLiuCraft 官方文档",
   description: "YunLiuCraft 官方文档",
   lang: 'zh-CN',

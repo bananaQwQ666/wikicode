@@ -1,6 +1,6 @@
 # 使用VR设备进入服务器
 
-本服安装了vivecraftmod，允许您<font style="background-color:#ff5847;">使用VR设备</font>加入服务器，其他玩家也可以<font style="background-color:#ff5847;">看见VR玩家的动作</font>。
+本服安装了vivecraftmod，允许您==使用VR设备==加入服务器，其他玩家也可以==看见VR玩家的动作==。
 
 ### 如何使用VR设备进入服务器？
 [【我的世界】3分钟教会你怎么安装我的世界VR版！！!_我的世界](https://www.bilibili.com/video/BV1MH4y1k7WQ)

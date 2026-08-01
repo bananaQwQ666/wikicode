@@ -15,6 +15,7 @@
     "vitepress": "^1.6.4"
   },
   "dependencies": {
+    "@nolebase/vitepress-plugin-git-changelog": "^2.18.2",
     "vitepress-plugin-image-preview": "^0.1.6"
   }
 }

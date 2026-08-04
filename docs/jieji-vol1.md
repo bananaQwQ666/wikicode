@@ -9,7 +9,7 @@
 <div style="display:none">
 异界之窗·隐藏线索（卷一）
   请打开以下网页：
-  https://map.baidu.com/@13262101.21,3238475.44,21z,87t,73.07h#panoid=09024700011606301540064485Q&panotype=street&heading=110.43&pitch=-4.02&l=21&tn=B_NORMAL_MAP&sc=0&newmap=1&shareurl=1&pid=09024700011606301540064485Q
+  https://j.map.baidu.com/5e/UjyM
   进入街景，往东方向走
   在街景中仔细观察，找到西街上第一家打铁店，记住门牌号数字
   

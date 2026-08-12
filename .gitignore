@@ -1,9 +1,13 @@
 # Dependencies
 node_modules/
 
-# VitePress build outputs and cache
+# Build outputs and cache
+dist/
+**/dist/
 .vitepress/dist/
 .vitepress/cache/
+**/.vitepress/dist/
+**/.vitepress/cache/
 
 # Logs and temporary files
 *.log

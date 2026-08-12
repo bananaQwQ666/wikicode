@@ -8,7 +8,8 @@
     "preview": "vitepress preview",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "postinstall": "node scripts/patch-git-changelog.js"
   },
   "devDependencies": {
     "markdown-it-mark": "^4.0.0",

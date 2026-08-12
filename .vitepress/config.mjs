@@ -47,7 +47,7 @@ export default defineConfig({
     lastmod: true
   },
   vite:{
-    publicDir: path.resolve(__dirname, '../public'),
+    publicDir: path.resolve(__dirname, '../docs/public'),
     plugins:[
       ImagePreviewPlugin({
         hideOnClickModal:true
